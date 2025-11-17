@@ -3,9 +3,9 @@
 Comparison between Content-Based Filtering and Collaborative Filtering
 
 ## Repository Contents
-- Report.pdf – full technical report of the project
-- movies.csv – MovieLens movies dataset
-- ratings.csv – MovieLens ratings dataset
+- [Report.pdf](Report.pdf) – full technical report of the project
+- [movies.csv](movies.csv) – MovieLens movies dataset
+- [ratings.csv](ratings.csv) – MovieLens ratings dataset
 
 Project code and Cypher queries for:
 Data import into Neo4j
