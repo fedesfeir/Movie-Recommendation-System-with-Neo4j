@@ -73,11 +73,13 @@ Both models were tested:
 - Collaborative Filtering → more diverse, dynamic, and better aligned recommendations
 
 ## Load Data into Neo4j (Cypher)
-### Constraints
+#### Create Constraints
+```cypher
 CREATE CONSTRAINT FOR (m:Movie) REQUIRE m.id IS UNIQUE;
 CREATE CONSTRAINT FOR (u:User) REQUIRE u.id IS UNIQUE;
 
-### Movies
+#### Movies
+```cypher
 LOAD CSV WITH HEADERS FROM 'file:///movies.csv' AS line
 WITH line, SPLIT(line.genres, '|') AS genres
 CREATE (m:Movie {id: toInteger(line.movieId), title: line.title})
@@ -85,7 +87,8 @@ UNWIND genres AS g
 MERGE (gen:Genre {name: toUpper(g)})
 CREATE (m)-[:HAS_GENRE]->(gen);
 
-### Ratings
+#### Ratings
+```cypher
 LOAD CSV WITH HEADERS FROM 'file:///ratings.csv' AS line
 MATCH (m:Movie {id: toInteger(line.movieId)})
 MERGE (u:User {id: toInteger(line.userId)})
