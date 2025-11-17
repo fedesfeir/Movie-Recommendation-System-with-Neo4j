@@ -96,4 +96,4 @@ CREATE (u)-[:RATED {rating: toFloat(line.rating)}]->(m);
 ```
 ## Authors
 Federica Sfeir
-Paola Maria Lepore
+\\ Paola Maria Lepore
