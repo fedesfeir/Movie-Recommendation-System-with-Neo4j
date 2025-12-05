@@ -1,4 +1,4 @@
-# Movie Recommendation System using Neo4j
+# Movie Recommendation System using NoSQL
 ## Hybrid Movie Recommender with the MovieLens Dataset
 Comparison between Content-Based Filtering and Collaborative Filtering
 
